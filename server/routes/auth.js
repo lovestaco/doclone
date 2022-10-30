@@ -23,6 +23,8 @@ authRouter.post("/api/signup", async (req, res) => {
 
       return res.json({ user });
     }
-  } catch (e) {}
+  } catch (e) {
+    res.status(500).json({ error: e.message });
+  }
 });
 module.exports = authRouter;
