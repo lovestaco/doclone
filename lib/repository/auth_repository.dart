@@ -5,6 +5,7 @@ import 'package:doclone/constants.dart';
 import 'package:doclone/models/user_model.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:http/http.dart' as http;
 
 // final authRepositoryProvider = Provider(
 //   (ref) => AuthRepository(
@@ -14,6 +15,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 class AuthRepository {
   final GoogleSignIn _googleSignIn;
+
   final Client _client;
   AuthRepository({required GoogleSignIn googleSignIn, required Client client})
       : _googleSignIn = googleSignIn,
